@@ -1,0 +1,89 @@
+DISK MANAGEMENT
+
+A.  BIOS vs. UEFI
+
+    i.  BIOS
+    
+        a.  Basic Input-Output System
+        
+        an assortment of low-level system software to abstract and interface the 
+        hardware, often located in a computer's firmware
+        
+        
+        
+    ii. UEFI
+    
+        a.  Uniform Extensible Firmware Interface
+
+        a specification that defines a software interface between an operating 
+        system and platform firmware. UEFI is meant to replace the Basic Input/
+        Output System (BIOS) firmware interface, present in all IBM PC-compatible 
+        personal computers.
+
+
+
+B.  MBR vs. GUID (GPT)
+
+    i.  MBR
+    
+        a.  Master Boot Record
+        
+        a special type of boot sector at the very beginning of partitioned computer 
+        mass storage devices like fixed disks or removable drives intended for use 
+        with IBM PC-compatible systems and beyond. The concept of MBRs was publicly 
+        introduced in 1983 with PC DOS 2.0.
+
+        The MBR holds the information on how the logical partitions, containing 
+        file systems, are organized on that medium. Besides that, the MBR also 
+        contains executable code to function as a loader for the installed 
+        operating system—usually by passing control over to the loader's second 
+        stage, or in conjunction with each partition's volume boot record (VBR). 
+        This MBR code is usually referred to as a boot loader.
+
+        The organization of the partition table in the MBR limits the maximum 
+        addressable storage space of a disk to 2 TB (232 × 512 bytes).[1] 
+        Therefore, the MBR-based partitioning scheme is in the process of being 
+        superseded by the GUID Partition Table (GPT) scheme in new computers. 
+        A GPT can coexist with an MBR in order to provide some limited form of a 
+        backwards compatibility for older systems.
+        
+        
+        
+    ii. GUID (GPT)
+    
+        a.  Globally-Unique Identifier Partition Table
+        
+        a standard for the layout of the partition table on a physical hard disk, 
+        using globally unique identifiers (GUID). Although it forms a part of the 
+        Unified Extensible Firmware Interface (UEFI) standard (Unified EFI Forum 
+        proposed replacement for the PC BIOS), it is also used on some BIOS systems 
+        because of the limitations of master boot record (MBR) partition tables, 
+        which use 32 bits for storing logical block addresses (LBA) and size 
+        information.
+
+C.  FILESYSTEMS
+
+        a.  a file system (or filesystem) is used to control how data is stored 
+        and retrieved. Without a file system, information placed in a storage area 
+        would be one large body of data with no way to tell where one piece of 
+        information stops and the next begins. By separating the data into individual 
+        pieces, and giving each piece a name, the information is easily separated 
+        and identified. Taking its name from the way paper based information systems 
+        are named, each piece of data is called a "file". The structure and logic 
+        rules used to manage the groups of information and their names is called 
+        a "file system".
+        
+        b. Types of Disk file systems
+
+            i.      FAT32
+            ii.     NTFS
+            iii.    EXT(3,4)
+            iv.     BTRFS
+            v.      REISER
+            vi.     ZFS
+    
+    
+Support for UEFI/GPT
+
+Arch - yes
+Gentoo - yes
